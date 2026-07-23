@@ -1,0 +1,4 @@
+import { Code2, BriefcaseBusiness, Mail } from "lucide-react";
+export const metadata = { title: "Contact" };
+const links = [[Mail, "Email", "mailto:hello@example.com"], [BriefcaseBusiness, "LinkedIn", "https://linkedin.com/in/your-handle"], [Code2, "GitHub", "https://github.com/your-handle"]] as const;
+export default function Contact() { return <section className="max-w-2xl"><p className="font-medium text-[var(--accent)]">Contact</p><h1 className="mt-3 text-5xl font-bold">Let’s make something useful.</h1><p className="mt-6 text-xl leading-8 text-[var(--muted)]">I’m open to thoughtful conversations about engineering, collaboration, and meaningful work.</p><div className="mt-10 space-y-3">{links.map(([Icon, label, href]) => <a key={label} className="flex items-center gap-3 rounded-md border bg-[var(--surface)] p-4 font-semibold hover:border-[var(--accent)]" href={href}><Icon size={20}/>{label}</a>)}</div></section>; }

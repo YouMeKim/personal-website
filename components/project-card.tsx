@@ -1,0 +1,3 @@
+import Link from "next/link";
+import type { Project } from "@/lib/projects";
+export function ProjectCard({ project }: { project: Project }) { return <article className="flex flex-col rounded-lg border bg-[var(--surface)] p-6 transition hover:-translate-y-1 hover:border-[var(--accent)]"><p className="text-sm font-medium text-[var(--accent)]">{project.categories.join(" · ")}</p><h3 className="mt-3 text-xl font-bold"><Link className="after:absolute" href={`/projects/${project.slug}`}>{project.title}</Link></h3><p className="mt-3 grow leading-7 text-[var(--muted)]">{project.summary}</p><ul className="mt-5 flex flex-wrap gap-2">{project.technologies.map((tech) => <li key={tech} className="rounded-full border px-2 py-1 text-xs">{tech}</li>)}</ul></article>; }

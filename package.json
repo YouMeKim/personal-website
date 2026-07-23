@@ -1,0 +1,38 @@
+{
+  "name": "personal-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "npx serve@latest out",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write ."
+  },
+  "dependencies": {
+    "@next/mdx": "latest",
+    "@mdx-js/loader": "latest",
+    "@mdx-js/react": "latest",
+    "gray-matter": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "next-themes": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@tailwindcss/postcss": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

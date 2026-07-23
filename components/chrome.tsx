@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { Code2, BriefcaseBusiness, Mail } from "lucide-react";
+import { ThemeToggle } from "./theme-toggle";
+const navigation = [["Home", "/"], ["About", "/about"], ["Projects", "/projects"], ["Résumé", "/resume"], ["Contact", "/contact"]] as const;
+export function Header() { return <header className="border-b"><nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4" aria-label="Main navigation"><Link className="font-bold" href="/">YN.</Link><div className="flex items-center gap-1 sm:gap-4">{navigation.map(([label, href]) => <Link key={href} className="rounded-md px-2 py-1 text-sm font-medium hover:text-[var(--accent)] sm:px-0" href={href}>{label}</Link>)}<ThemeToggle /></div></nav></header>; }
+export function Footer() { return <footer className="border-t"><div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between"><p>© {new Date().getFullYear()} Your Name. Built with care.</p><div className="flex gap-4"><a aria-label="GitHub" href="https://github.com/your-handle"><Code2 size={18}/></a><a aria-label="LinkedIn" href="https://linkedin.com/in/your-handle"><BriefcaseBusiness size={18}/></a><a aria-label="Email" href="mailto:hello@example.com"><Mail size={18}/></a></div></div></footer>; }
